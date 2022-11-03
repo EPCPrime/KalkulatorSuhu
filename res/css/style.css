@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background: #ffffff;
+  color: #303030;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.blob {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.blob.a {
+  background-color: #F7CDDF;
+  position: absolute;
+  right: -176px;
+  top: 56px;
+}
+
+.blob.b {
+  background-color: #CB8EFF;
+  position: absolute;
+  left: -226px;
+  bottom: 0;
+}
+
+.container {
+  height: calc(100vh - 96px);
+  padding: 48px 250px;
+  background: linear-gradient(180deg, rgba(70, 70, 70, 0.25) 0%, rgba(70, 70, 70, 0.15) 100%);
+  backdrop-filter: blur(100px);
+}
+
+#convert {
+  cursor: pointer;
+}
+
+#conver:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header .menu {
+  flex: 1;
+  font-weight: bold;
+  text-align: right;
+}
+
+section {
+  margin-top: 144px;
+}
+
+section .huge-text {
+  width: 379px;
+  font-size: 64px;
+  font-weight: bold;
+  background: radial-gradient(42.08% 449.25% at 46.57% 50%, #665079 0%, #8A3CC2 0.01%, #AB2E65 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section .calculator {
+  margin-left: calc(50% - 600px);
+  margin-top: 96px;
+  width: 1200px;
+  height: 160px;
+  box-sizing: border-box;
+  border: 3px solid rgba(216, 216, 216, 0.15);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 25px;
+}
+
+.calculator img {
+  margin-top: 35px;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, select {
+  height: 50px;
+  border-radius: 16px;
+  width: 120px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200 !important;
+  color: #000000;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.satuanSuhuSelect {
+  color: #8B8797;
+}
+
+footer {
+  margin-top: 96px;
+  padding: 0px 120px;
+  display: flex;
+  justify-content: center;
+  gap: 39px;
+}
+
+footer .right {
+  flex: 1;
+  text-align: justify;
+  color: #404040;
+  border-left: 3px solid rgba(139, 135, 151, 0.5);
+  padding-left: 39px;
+}
+
+.right .header {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+  color: #303030;
+}
+
+footer .left {
+  flex: 1;
+  text-align: justify;
+  color: #404040;
+}
+
+@media screen and (max-width: 1500px) {
+  footer {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 48px 100px !important;
+  }
+
+  .calculator {
+    margin-left: calc(50% - 500px) !important;
+    width: 1000px !important;
+  }
+}
