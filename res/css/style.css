@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
@@ -33,7 +37,11 @@ body {
 }
 
 .container {
-  height: calc(100vh - 96px);
+  position: relative;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 48px 250px;
   background: linear-gradient(180deg, rgba(70, 70, 70, 0.25) 0%, rgba(70, 70, 70, 0.15) 100%);
   backdrop-filter: blur(100px);
@@ -148,21 +156,4 @@ footer .left {
   flex: 1;
   text-align: justify;
   color: #404040;
-}
-
-@media screen and (max-width: 1500px) {
-  footer {
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    padding: 48px 100px !important;
-  }
-
-  .calculator {
-    margin-left: calc(50% - 500px) !important;
-    width: 1000px !important;
-  }
 }
