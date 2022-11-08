@@ -1,0 +1,23 @@
+
+@media screen and (min-width: 1800px) {
+  .container {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  footer {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 48px 100px !important;
+  }
+
+  .calculator {
+    margin-left: calc(50% - 500px) !important;
+    width: 1000px !important;
+  }
+}
