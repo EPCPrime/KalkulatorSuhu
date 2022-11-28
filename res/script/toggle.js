@@ -1,3 +1,5 @@
+$(".switchMode").click(toggleClass);
+
 function toggleClass(){
     $("body").toggleClass("dark");
 
