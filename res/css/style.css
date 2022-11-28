@@ -13,6 +13,12 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.dark{
+  background: #0E032B;
+  color: #fff;
 }
 
 .blob {
@@ -27,6 +33,11 @@ body {
   position: absolute;
   right: -176px;
   top: 56px;
+  transition: 0.5s ease-in-out;
+}
+
+.dark .blob.a{
+  background: #795062;
 }
 
 .blob.b {
@@ -34,6 +45,11 @@ body {
   position: absolute;
   left: -226px;
   bottom: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.dark .blob.b{
+  background: #501F7A;
 }
 
 .container {
@@ -47,17 +63,10 @@ body {
   backdrop-filter: blur(100px);
 }
 
-#convert {
-  cursor: pointer;
-}
-
-#conver:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
 header {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 header .menu {
@@ -80,6 +89,13 @@ section .huge-text {
   -webkit-text-fill-color: transparent;
 }
 
+.dark section .huge-text{
+  background: radial-gradient(42.08% 449.25% at 46.57% 50%, #D5A3FF 0%, #FFAED2 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 section .calculator {
   margin-left: calc(50% - 600px);
   margin-top: 96px;
@@ -96,9 +112,17 @@ section .calculator {
   gap: 25px;
 }
 
+.dark section .calculator{
+  background: linear-gradient(180deg, rgba(64, 64, 64, 0.3) 0%, rgba(64, 64, 64, 0.15) 100%);
+}
+
 .calculator img {
   margin-top: 35px;
   border-color: rgba(0, 0, 0, 0.25);
+}
+
+.dark .calculator img{
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .bloc {
@@ -118,6 +142,12 @@ input, select {
   font-size: 24px;
   font-weight: 200 !important;
   color: #000000;
+  transition: 0.5s ease-in-out;
+}
+
+.dark input, .dark select{
+  background: rgba(140, 140, 140, 0.15);
+  color: #fff;
 }
 
 select {
@@ -144,6 +174,10 @@ footer .right {
   padding-left: 39px;
 }
 
+.dark footer .right{
+  color: #8B8797;
+}
+
 .right .header {
   font-size: 24px;
   font-weight: 700;
@@ -152,8 +186,24 @@ footer .right {
   color: #303030;
 }
 
+.dark .right .header{
+  color: #D9D9D9;
+}
+
 footer .left {
   flex: 1;
   text-align: justify;
   color: #404040;
+}
+
+.dark footer .left{
+  color: #8B8797;
+}
+
+/* Toggle light dark */
+.switchMode {
+  margin-left: 25px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }

@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="res/css/style.css">
-  <link rel="stylesheet" href="res/css/responsive.css">
+    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="stylesheet" href="res/css/responsive.css">
 
-  <title>KalkulatorSuhu | Kelompok 4 RPL</title>
+    <title>KalkulatorSuhu | Kelompok 4 RPL</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <span class="logo">Kalkulator<b>Suhu</b></span>
-      <span class="menu">°C  &nbsp;°R  &nbsp;°F &nbsp;&nbsp;K</span>
-    </header>
+    <div class="container">
+        <header>
+            <span class="logo">Kalkulator<b>Suhu</b></span>
+            <span class="menu">°C  &nbsp;°R  &nbsp;°F &nbsp;&nbsp;K</span>
+            <img src="res/icons/moon.svg" alt="DarkMode" id="DarkMode" class="switchMode" onclick="toggleClass()" title="Dark Mode">
+            <img src="res/icons/sun.svg" alt="LightMode" id="LightMode" class="switchMode" onclick="toggleClass()" title="Light Mode">
+        </header>
 
-    <section>
-      <span class="huge-text">Kalkulator<br> Konversi Suhu</span>
-      <div class="calculator">
-        <div class="bloc a">
-          <span>Suhu Awal</span>
-          <input type="text" name="suhuAwal" id="suhuAwal">
-        </div>
-        <div class="bloc b">
-          <span>Satuan Suhu</span>
-          <select name="satuanSuhu" id="satuanSuhu">
-            <option value="celcius" class="satuanSuhuSelect">°C</option>
-            <option value="reamur" class="satuanSuhuSelect">°R</option>
-            <option value="fahrenheit" class="satuanSuhuSelect">°F</option>
-            <option value="kelvin" class="satuanSuhuSelect">K</option>
-          </select>
-        </div>
-        <img src="res/icons/horizontal.svg" alt="Convert Icons" id="convert">
-        <div class="bloc celcius">
-          <span>Celcius</span>
-          <input type="text" name="celcius" id="celcius" disabled>
-        </div>
-        <div class="bloc reamur">
-          <span>Reamur</span>
-          <input type="text" name="reamur" id="reamur" disabled>
-        </div>
-        <div class="bloc fahrenheit">
-          <span>Fahrenheit</span>
-          <input type="text" name="fahrenheit" id="fahrenheit" disabled>
-        </div>
-        <div class="bloc kelvin">
-          <span>Kelvin</span>
-          <input type="text" name="kelvin" id="kelvin" disabled>
-        </div>
-      </div>
-    </section>
+        <section>
+            <span class="huge-text">Kalkulator<br> Konversi Suhu</span>
+            <div class="calculator">
+                <div class="bloc a">
+                    <span>Suhu Awal</span>
+                    <input type="text" name="suhuAwal" id="suhuAwal">
+                </div>
+                <div class="bloc b">
+                    <span>Satuan Suhu</span>
+                    <select name="satuanSuhu" id="satuanSuhu">
+                        <option value="celcius" class="satuanSuhuSelect">°C</option>
+                        <option value="reamur" class="satuanSuhuSelect">°R</option>
+                        <option value="fahrenheit" class="satuanSuhuSelect">°F</option>
+                        <option value="kelvin" class="satuanSuhuSelect">K</option>
+                    </select>
+                </div>
+                <img src="res/icons/horizontal.svg" alt="Convert Icons" id="lightIcon">
+                <img src="res/icons/horizontal_dark.svg" alt="Convert Icons" id="darkIcon">
+                <div class="bloc celcius">
+                    <span>Celcius</span>
+                    <input type="text" name="celcius" id="celcius" disabled>
+                </div>
+                <div class="bloc reamur">
+                    <span>Reamur</span>
+                    <input type="text" name="reamur" id="reamur" disabled>
+                </div>
+                <div class="bloc fahrenheit">
+                    <span>Fahrenheit</span>
+                    <input type="text" name="fahrenheit" id="fahrenheit" disabled>
+                </div>
+                <div class="bloc kelvin">
+                    <span>Kelvin</span>
+                    <input type="text" name="kelvin" id="kelvin" disabled>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-      <span class="left">Kalkulator ini di design untuk mengkonversi suhu dari satuan Celcius ke Reamur, Celcius ke Fahrenheit, Celcius ke Kelvin, Reamur ke Celcius, Reamur ke Fahrenheit, Reamur ke Kelvin, Fahrenheit ke Celcius, Fahrenheit ke Reamur, Fahrenheit ke Kelvin, Kelvin ke Celcius, Kelvin ke Reamur, dan Kelvin ke Fahrenheit.</span>
-      <div class="right">
-        <span class="header">Cara Kerja Kalkulator</span>
-        <span>Masukkan suhu awal pada field Suhu Awal, selanjutnya anda diharuskan untuk memilih satuan suhu. Setelah itu klik icon convert dan hasil akan otomatis muncul pada masing-masing field di bagian kanan.</span>
-      </div>
-    </footer>
+        <footer>
+            <span class="left">Kalkulator ini di design untuk mengkonversi suhu dari satuan Celcius ke Reamur, Celcius ke Fahrenheit, Celcius ke Kelvin, Reamur ke Celcius, Reamur ke Fahrenheit, Reamur ke Kelvin, Fahrenheit ke Celcius, Fahrenheit ke Reamur, Fahrenheit ke Kelvin, Kelvin ke Celcius, Kelvin ke Reamur, dan Kelvin ke Fahrenheit.</span>
+            <div class="right">
+                <span class="header">Cara Kerja Kalkulator</span>
+                <span>Masukkan suhu awal pada field Suhu Awal, selanjutnya anda diharuskan untuk memilih satuan suhu. Setelah itu, hasil akan otomatis muncul pada masing-masing field di bagian kanan.</span>
+            </div>
+        </footer>
+    </div>
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="toggleClass" onclick="toggleClass()"></div>
 
-  </div>
-  <div class="blob a"></div>
-  <div class="blob b"></div>
-
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-  <script src="res/script/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="res/script/script.js"></script>
+    <script src="res/script/toggle.js"></script>
 </body>
 </html>

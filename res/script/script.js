@@ -1,13 +1,16 @@
-$("#convert").click(function() {
-  if($("#suhuAwal").val() != "") {
+$("#suhuAwal").keyup(hitungSuhu);
+$("#satuanSuhu").change(hitungSuhu);
+
+function hitungSuhu(){
+  if($("#suhuAwal").val() != ""){
     suhuAwal = $("#suhuAwal").val();
     satuanSuhu = $("#satuanSuhu").val();
 
-    if(satuanSuhu == "celcius") {
-      $("#celcius").val(suhuAwal + " °C");
-      $("#reamur").val(Math.round(((4/5) * suhuAwal) * 10) / 10 + " °R");
-      $("#fahrenheit").val(Math.round(((9/5) * suhuAwal + 32) * 10) / 10 + " °F");
-      $("#kelvin").val(Math.round((parseInt(suhuAwal) + 273) * 10) / 10 + " K");
+    if(satuanSuhu == "celcius"){
+        $("#celcius").val(suhuAwal + " °C");
+        $("#reamur").val(Math.round(((4/5) * suhuAwal) * 10) / 10 + " °R");
+        $("#fahrenheit").val(Math.round(((9/5) * suhuAwal + 32) * 10) / 10 + " °F");
+        $("#kelvin").val(Math.round((parseInt(suhuAwal) + 273) * 10) / 10 + " K");
     }
 
     if(satuanSuhu == "reamur") {
@@ -31,10 +34,9 @@ $("#convert").click(function() {
       $("#kelvin").val(suhuAwal + " K");
     }
   } else {
-    Swal.fire(
-      'Pastikan Suhu Awal Terisi!',
-      'Suhu Awal kosong, silahkan diisi terlebih dahulu!',
-      'error'
-    );
+    $("#celcius").val("");
+    $("#reamur").val("");
+    $("#fahrenheit").val("");
+    $("#kelvin").val("");
   }
-});
+}
